@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css  %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block title %} Inisia Sesión {% endblock %}
+
+{% block content %}
+{{error}}
+<section>
+  <div class="contenedor">
+    <div class="formulario">
+      <form method="POST">
+        {% csrf_token %}
+        <h2 >Inicia Sesión</h2>
+        <div class="input_contenedor">
+          <i class='bx bx-envelope'></i>
+          <input type="text" name="username" required>
+          <label for="id_username">Nombre</label>
+        </div>
+        <div class="input_contenedor">
+          <i class='bx bxs-lock-open'></i>
+          <input type="password" name="password" required>
+          <label for="id_password">Contraseña</label>
+        </div>
+        <div class="olvidar">
+          <label for="#">
+            <input type="checkbox">
+            <a href="#">Recordar contraseña</a>
+          </label>
+        </div>
+        <button>Acceder</button>
+      </form>
+      <div>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

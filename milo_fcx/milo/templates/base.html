@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/Fenix.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}
+    {% endblock %}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="imagen-text">
+                <span class="imagen">
+                    <img src="{% static 'img/Fenix.png' %}" alt="My image">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Fenix  Comercial</span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="search-box">
+                        <a href="#">
+                            <i class='bx bx-search-alt-2 icon ' ></i>
+                            <input type="search" placeholder="Buscar....">
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="{% url 'Inicio' %}">
+                            <i class='bx bx-home  icon'></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-links">
+                        <a href="{% url 'cotizador' %}">
+                            <i class='bx bxs-hard-hat  icon'></i>
+                            <span class="text nav-text">Cotizaciones</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="{% url 'tickets' %}">
+                            <i class='bx bxs-add-to-queue icon' ></i>
+                            <span class="text nav-text">Tickets</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <li class="nav-links">
+                        <a href="#">
+                            <i class='bx bxs-info-circle  icon' ></i>
+                            <span class="text nav-text">Nosotros</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="botton-content">
+            {% if user.is_authenticated %}
+            <li class="">
+                <a href="{% url 'logout' %}">
+                    <i class='bx bx-log-out icon'></i>
+                    <span class="text nav-text">serrar sesion</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="">
+                <a href="{% url 'login' %}">
+                    <i class='bx bx-log-in icon' ></i>
+                    <span class="text nav-text">Iniciar sesion</span>
+                </a>
+            </li>
+            {% endif %}
+            <li class="mode">
+                <div class="moon-sun">
+                    <i class="bx bx-moon monn icon"></i>
+                    <i class="bx bx-sun sun icon"></i>
+                </div>
+                <span class="moden-text text">Dark Mode</span>
+
+                <div class="toggle-switch">
+                <span class="switch"></span>
+                </div>
+                </li>
+            </div>
+    </div>
+    </nav>
+    <div class="contenido">
+        <div class="text">
+            {% block content %}
+            
+            {% endblock %}
+        </div>
+    </div>
+    {% block js %}
+    {% endblock %}
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

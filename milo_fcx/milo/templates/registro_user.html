@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css  %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+{% block title %} Registro de usuarios {% endblock %}
+{% block content %}
+  
+{{error}}
+<section>
+    <div class="contenedor">
+      <div class="formulario">
+        <form method="POST" >
+            {% csrf_token %}
+          <h2>Registro</h2>
+          <div class="input_contenedor">
+            <i class='bx bxs-user' ></i>
+            <input type="text" name="username" id="username" required>
+            <label for="id_username">Nombre</label>
+          </div>
+          <div class="input_contenedor">
+            <i class='bx bx-envelope'></i>
+            <input type="email" name="email" id="email" required>
+            <label for="id_email">Correo</label>
+          </div>
+          <div class="input_contenedor">
+            <i class='bx bx-mobile'></i>
+            <input type="text" name="celular_cli" id="celular_cli" required>
+            <label for="id_celular_cli">Celular</label>
+          </div>
+          <div class="input_contenedor">
+            <i class='bx bxs-wallet'></i>
+            <input type="text" name="Nit_cli" id="Nit_cli">
+            <label for="id_Nit_cli">Nit</label>
+          </div>
+          <div class="input_contenedor">
+            <i class='bx bxs-lock-open'></i>
+            <input type="password" autocomplete="new-password" name="password1" id="password1" required>
+            <label for="id_password1">contraseña</label>
+        </div>
+        <div class="input_contenedor">
+            <i class='bx bxs-lock-open'></i>
+            <input type="password" autocomplete="new-password" name="password2" id="password2" required>
+            <label for="id_password2">validar contraseña</label>
+        </div>
+            <div>
+            <button>Acceder</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+{% endblock %}

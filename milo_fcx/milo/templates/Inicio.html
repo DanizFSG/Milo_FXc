@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Fenix Comercial {% endblock %}
+
+{% block css  %}
+<link rel="stylesheet" href="{% static 'css/inicio.css'  %}">
+{% endblock %}
+{% block content %}
+    <div class="slide-container">
+        <div class="slider-content">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/inicio.js' %}"></script>
+{% endblock %}
