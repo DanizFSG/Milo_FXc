@@ -94,13 +94,16 @@
     </nav>
     <div class="contenido">
         <div class="text">
-            {% block content %}
+            <center>
+                {% block content %}
             
-            {% endblock %}
+                {% endblock %}
+            </center>
         </div>
     </div>
     {% block js %}
     {% endblock %}
+
     <script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>

@@ -5,88 +5,93 @@
     <link rel="stylesheet" href="{% static 'css/tickest.css'  %}">
 {% endblock %}
         {% block content %}
-        <div class="container">
-            <div class="title">
-                <h1>Tikets Garantia</h1>
-                <form action="">
-                    <div class="user-details">
-                        <div class="imput-box">
-                            <span class="details">Nombre</span>
-                            <input type="text" placeholder="cliente" name="cliente" required>
+        <center>
+            <div class="container">
+                <div class="title">
+                    <h1>Tikets Garantia</h1>
+                    <form action="">
+                        <div class="user-details">
+                            <div class="imput-box">
+                                <span class="details">Nombre</span>
+                                <input type="text" placeholder="cliente" name="cliente" required>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Correo</span>
+                                <input type="email" placeholder="Correo" name="correo_ticket" required>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Empresa</span>
+                                <input type="text" placeholder="Empresa" name="empresa" >
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Referencia</span>
+                                <input type="text" placeholder="Refereencia" name="refereencia" required>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Serial</span>
+                                <input type="text" placeholder="Serial" name="serial" required>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Marca</span>
+                                <select name=" marca">
+                                    <option value="..." selected>...</option>
+                                    <option value="Hikvision">Hikvision</option>
+                                    <option value="Hilook" >Hilook</option>
+                                    <option value="Reyee">Reyee</option> 
+                                    <option value="Otra">Otra</option> 
+                                  </select>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Garantia</span>
+                                <select name="garantia">
+                                    <option value="..." selected>...</option>
+                                    <option value="Hikvision">Hikvision</option>
+                                    <option value="Fenix" >Fenix</option>
+                                    <option value="Fuera de Garantia" >Fuera de Garantia </option>
+                                  </select>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Fecha de ingreso</span>
+                                <input type="date" placeholder="Nombre" name="nombre" required>
+                            </div>
+                            <div class="imput-box">
+                                <span class="details">Fecha de cierre</span>
+                                <input type="date" placeholder="Nombre" name="nombre" required>
+                            </div>
+                            <div class="imput-box img-foto">
+                                <span class="details">Foto del equipo</span>
+                                <input type="file" placeholder="Nombre" name="nombre" >
+                            </div>
+                            <div class="imput-box img-foto">
+                                <span class="details">Foto de la etiqueta</span>
+                                <input type="file" placeholder="Nombre" name="nombre" >
+                            </div>
+                            <div class="imput-box img-foto">
+                                <span class="details">Foto de la etiqueta</span>
+                                <input type="file" placeholder="Nombre" name="nombre" >
+                            </div>
+    
+                            <div class="checkbox ">
+                                <span class="details">Accesorios:</span>
+                                <label for="Adaptador de corriente">Fuente</label>
+                                <input type="checkbox" id="Adaptador_de_corriente" name="Adaptador de corriente" value="Adaptador_de_corriente">
+                                <label for="HDD">HDD</label>
+                                <input type="checkbox" id="HDD" name="HDD" value="HDD">
+                                <label for="Cables">Cables</label>
+                                <input type="checkbox" id="Cables" name="Cables" value="Cables">
+                                <label for="Caja">Caja</label>
+                                <input type="checkbox" id="Caja" name="Caja" value="Caja">
+                            </div>
+                        <div class="button">
+                            <input type="submit" value="Crear tiket">
                         </div>
-                        <div class="imput-box">
-                            <span class="details">Correo</span>
-                            <input type="email" placeholder="Correo" name="correo_ticket" required>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Empresa</span>
-                            <input type="text" placeholder="Empresa" name="empresa" >
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Referencia</span>
-                            <input type="text" placeholder="Refereencia" name="refereencia" required>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Serial</span>
-                            <input type="text" placeholder="Serial" name="serial" required>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Marca</span>
-                            <select name=" marca">
-                                <option value="..." selected>...</option>
-                                <option value="Hikvision">Hikvision</option>
-                                <option value="Hilook" >Hilook</option>
-                                <option value="Reyee">Reyee</option> 
-                                <option value="Otra">Otra</option> 
-                              </select>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Garantia</span>
-                            <select name="garantia">
-                                <option value="..." selected>...</option>
-                                <option value="Hikvision">Hikvision</option>
-                                <option value="Fenix" >Fenix</option>
-                                <option value="Fuera de Garantia" >Fuera de Garantia </option>
-                              </select>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Fecha de ingreso</span>
-                            <input type="date" placeholder="Nombre" name="nombre" required>
-                        </div>
-                        <div class="imput-box">
-                            <span class="details">Fecha de cierre</span>
-                            <input type="date" placeholder="Nombre" name="nombre" required>
-                        </div>
-                        <div class="imput-box img-foto">
-                            <span class="details">Foto del equipo</span>
-                            <input type="file" placeholder="Nombre" name="nombre" >
-                        </div>
-                        <div class="imput-box img-foto">
-                            <span class="details">Foto de la etiqueta</span>
-                            <input type="file" placeholder="Nombre" name="nombre" >
-                        </div>
-                        <div class="imput-box img-foto">
-                            <span class="details">Foto de la etiqueta</span>
-                            <input type="file" placeholder="Nombre" name="nombre" >
-                        </div>
-
-                        <div class="checkbox ">
-                            <span class="details">Accesorios:</span>
-                            <label for="Adaptador de corriente">Fuente</label>
-                            <input type="checkbox" id="Adaptador_de_corriente" name="Adaptador de corriente" value="Adaptador_de_corriente">
-                            <label for="HDD">HDD</label>
-                            <input type="checkbox" id="HDD" name="HDD" value="HDD">
-                            <label for="Cables">Cables</label>
-                            <input type="checkbox" id="Cables" name="Cables" value="Cables">
-                            <label for="Caja">Caja</label>
-                            <input type="checkbox" id="Caja" name="Caja" value="Caja">
-                        </div>
-                    <div class="button">
-                        <input type="submit" value="Crear tiket">
-                    </div>
-                </form>
+                    </form>
+                </div>
+                <table>
+                    <tr>
+                </table>
             </div>
-        </div>
+        </center>
         {% endblock %}
     {% block js %}
     <script src="{% static 'js/Tikets.js' %}"></script>
