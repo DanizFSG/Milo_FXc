@@ -50,17 +50,24 @@
                                     <option value="Fuera de Garantia" >Fuera de Garantia </option>
                                   </select>
                             </div>
-                            
-                            
+                            <div class="imput-box">
+                                <span class="details">Sintoma del equipo</span>
+                                <input type="text" placeholder="No inicia, no da video ETC..." name="Sintoma_del_equipo" required>
+                            </div>
                             <div class="imput-box img-foto">
-                                <span class="details">Foto de la caja </span>
-                                <input type="file" name="foto_caja" >
-                                <span class="details">Foto del equipo</span>
-                                <input type="file" name="foto_equipo" required>
-                                <span class="details">Foto del estiker</span>
+                                <span class="details">Subir foto del stiker </span>
                                 <input type="file" name="foto_estiker" >
                             </div>
-    
+                            <div class="imput-box img-foto">
+                                <span class="details">Subir foto del equipo</span>
+                                <input type="file" name="foto_estiker" >
+                            </div>
+                            <div class="imput-box img-foto">
+                                <span class="details">Subir Foto de la falla</span>
+                                <input type="file" name="foto_estiker" src="img/estiker.png">
+                            </div>
+                            
+                            
                             <div class="checkbox ">
                                 <span class="details">Accesorios:</span>
                                 <label for="Adaptador de corriente">Fuente</label>
@@ -72,11 +79,9 @@
                                 <label for="Caja">Caja</label>
                                 <input type="checkbox" id="Caja" name="Caja" value="Caja">
                             </div>
-
-                                <input class="button" type="submit" value="Crear tiket">
+                            <input class="button" type="submit" value="Crear tiket">
                     </form>
                 </div>
-
             </div>
         
         {% endblock %}
