@@ -47,7 +47,8 @@ body{
     z-index: 100;
 }
 .sidebar.close{
-    width: 88px;
+    width: 100px;
+
 }
 /*    resuabe css    */
 .sidebar .text{
@@ -59,8 +60,13 @@ body{
     opacity: 1;
 }
 .sidebar.close .text{
-    transform: translatex(-50%);
+    opacity: 0;
+    
+    
+
 }
+
+
 .sidebar .imagen{
     min-width: 60px;
     display: flex;

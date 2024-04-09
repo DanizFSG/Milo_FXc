@@ -1,3 +1,5 @@
+
+from tabnanny import verbose
 from django.db import models
 from users.models import User
 
@@ -5,15 +7,23 @@ from users.models import User
 
 class Ticket(models.Model):
     
-    tickets_id = models.ForeignKey('User_tickets', on_delete=models.CASCADE)
-    tickets_name = models.CharField(max_length=200)
-    tickets_email = models.EmailField(max_length=200)
-    tickets_empresa = models.CharField(max_length=200)
-    tickets_referencia = models.CharField(max_length=200)
-    tickets_serial = models.CharField(max_length=200)
-    tickets_marca = models.CharField(max_length=200)
-    tickets_garantia = models.CharField(max_length=200)
-    tickets_fechaIN = models.DateTimeField(auto_now_add=True)
-    tickets_fechaSR = models.DateTimeField(auto_now=True)
-    tickets_img1 = models.ImageField(upload_to='tickets_img1', blank=True, null=True)
-    tickets_img2 = models.ImageField(upload_to='tickets_img2', blank=True, null=True)
+    name = models.CharField(max_length=100)
+    correo = models.EmailField(max_length=100)
+    empresa = models.CharField(max_length=100)
+    referencia = models.CharField(max_length=100)
+    serial = models.CharField(max_length=100)
+    marca = models.CharField(max_length=100)
+    garantia = models.CharField(max_length=100)
+    accesorios = models.CharField(max_length=100)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+    img1 = models.ImageField(upload_to='tickets/img1/', blank=True)
+    img2 = models.ImageField(upload_to='tickets/img2/', blank=True)
+    img4 = models.ImageField(upload_to='tickets/img3/', blank=True)
+    
+    
+    def __str__(self):
+        return self.name
+    
+    
+    class meta:
+        pass

@@ -106,7 +106,9 @@ form .user-details .imput-box{
     cursor: pointer;
 }
 .user-details .button:hover{
-    opacity: 0.7;
+    transition: var(--tran-03);
+    background: var(--body-color);
+    color: var(--primary-color);
 }
 
 .user-details .img-foto{
@@ -119,6 +121,7 @@ form .user-details .imput-box{
     width: 100%;
     height: 60px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .user-details .img-foto input{
@@ -130,4 +133,10 @@ form .user-details .imput-box{
     width: 100%;
     height: 100%;
     opacity: 0;
+    cursor: pointer;
+}
+.user-details .img-foto:hover{
+    transition: var(--tran-05);
+    color: var(--sidebar-color);
+   background:var(--primary-color) ;
 }
