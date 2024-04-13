@@ -5,19 +5,20 @@
     <link rel="stylesheet" href="{% static 'css/tickest.css'  %}">
 {% endblock %}
         {% block content %}
-       
+        
             <div class="container">
                 <div class="title">
-                    <h1>Tikets Garantia</h1>
-                    <form action="">
+                    <h1>Tickets Garantia</h1>
+                    <form method="POST" >
+                        {% csrf_token %}
                         <div class="user-details">
                             <div class="imput-box">
                                 <span class="details">Nombre</span>
-                                <input type="text" placeholder="cliente" name="cliente" required>
+                                <input type="text" placeholder="cliente" name="name" required>
                             </div>
                             <div class="imput-box">
                                 <span class="details">Correo</span>
-                                <input type="email" placeholder="Correo" name="correo_ticket" required>
+                                <input type="email" placeholder="Correo" name="correo" required>
                             </div>
                             <div class="imput-box">
                                 <span class="details">Empresa</span>
@@ -25,7 +26,7 @@
                             </div>
                             <div class="imput-box">
                                 <span class="details">Referencia</span>
-                                <input type="text" placeholder="Refereencia" name="refereencia" required>
+                                <input type="text" placeholder="Refereencia" name="referencia" required>
                             </div>
                             <div class="imput-box">
                                 <span class="details">Serial</span>
