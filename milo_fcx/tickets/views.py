@@ -7,7 +7,7 @@ def tickets(request):
         form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return render(request, 'tickets.html', "exitoso")
+            return render(request,  "exitoso")
         else:
             return render(request, 'tickets.html')
   
