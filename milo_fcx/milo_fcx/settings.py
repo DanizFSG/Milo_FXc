@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'milo_fcx.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'milodate',
+        'NAME': 'milodate2',
         'USER': 'root',
         'PASSWORD': 'admin1234',
         'HOST': '127.0.0.1',
