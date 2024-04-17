@@ -17,6 +17,7 @@ class Ticket(models.Model):
     hdd = models.BooleanField(default=False)
     cables = models.BooleanField(default=False)
     caja = models.BooleanField(default=False)
+    defectoDelEquipo = models.TextField(max_length=2000)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     img1 = models.ImageField(upload_to='tickets/img/', blank=True)
     img2 = models.ImageField(upload_to='tickets/img/', blank=True)
@@ -25,7 +26,7 @@ class Ticket(models.Model):
     
     
     def __str__(self):
-        return self.name + " - " + self.id
+        return self.name
     
     
     class meta:

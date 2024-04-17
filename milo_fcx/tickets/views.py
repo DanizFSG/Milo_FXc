@@ -1,8 +1,11 @@
 
 from django.shortcuts import render
-from .forms import TicketForm
+from.models import Ticket
+
 # Create your views here.
 def tickets(request):
 
-         
-    return render(request, 'tickets.html')
+    tickets = Ticket.objects.all()
+    return render(request, 'tickets.html',{
+        'tickets': tickets
+    })

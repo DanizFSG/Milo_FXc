@@ -53,7 +53,7 @@
                             </div>
                             <div class="imput-box">
                                 <span class="details">Sintoma del equipo</span>
-                                <input type="text" placeholder="No inicia, no da video ETC..." name="Sintoma_del_equipo" required>
+                                <input type="text" placeholder="No inicia, no da video ETC..." name="defectoDelEquipo" required>
                             </div>
                             <div class="imput-box img-foto">
                                 <span class="details">Subir foto del stiker </span>
@@ -80,7 +80,33 @@
                             </div>
                             <input class="button" type="submit" value="Crear tiket">
                     </form>
-
+                    <div class="date">
+                        <table>
+                            <th>N°Tickets</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Empresa</th>
+                            <th>Referencia</th>
+                            <th>Serial</th>
+                            <th>Marca</th>
+                            <th>Garantia</th>
+                            <th>Sintoma del equipo</th>
+                            <th>info....</th>
+                            {% for ticket in tickets %}
+                            <tr>
+                                <td>{{ticket.id}}</td>
+                                <td>{{ticket.name}}</td>
+                                <td>{{ticket.correo}}</td>
+                                <td>{{ticket.empresa}}</td>
+                                <td>{{ticket.referencia}}</td>
+                                <td>{{ticket.serial}}</td>
+                                <td>{{ticket.marca}}</td>
+                                <td>{{ticket.garantia}}</td>
+                                <td>{{ticket.defectoDelEquipo}}</td>
+                            </tr>
+                            {% endfor %}      
+                        </table> 
+                    </div>
                 </div>
             </div>
         
